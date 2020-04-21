@@ -25,6 +25,10 @@ public class Main {
 
         Tree strom = new Tree(null);
         strom.printInOrder();
+
+        System.out.println(myTree.getValue(20));
     }
+
+
 
 }
