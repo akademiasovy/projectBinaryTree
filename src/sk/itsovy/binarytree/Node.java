@@ -1,5 +1,7 @@
 package sk.itsovy.binarytree;
 
+import java.util.List;
+
 public class Node {
 
     private int key;
@@ -61,48 +63,9 @@ public class Node {
         }
     }
 
-    public void inorder(){
-        if(this.left!=null)
-            left.inorder();
-        System.out.println("("+this.key+"): "+ this.value+" ");
-        if(this.right!=null)
-            right.inorder();
-    }
-
-    public void preorder(){
-        System.out.println("("+this.key+"): "+ this.value+" ");
-        if(this.left!=null)
-            left.preorder();
-        if(this.right!=null)
-            right.preorder();
-    }
-
-    public void postorder(){
-
-        if(this.left!=null)
-            left.postorder();
-        if(this.right!=null)
-            right.postorder();
-        System.out.println("("+this.key+"): "+ this.value+" ");
-    }
-
-
     public boolean isLeaf() {
         return (left==null) && (right==null);
     }
-
-    public Node getMinRightNode(){
-        if(this.getRight()==null)
-            return null;
-        Node akt = this.getRight();
-        for(;;){
-            if(akt.getLeft()==null)
-                return akt;
-            akt=akt.getLeft();
-        }
-    }
-
-
 
 
 }
