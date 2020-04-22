@@ -87,7 +87,7 @@ public class Node {
     }
 
 
-    public boolean isLeaf(Node node) {
+    public boolean isLeaf() {
         return (left==null) && (right==null);
     }
 
@@ -101,6 +101,8 @@ public class Node {
             akt=akt.getLeft();
         }
     }
+
+
 
 
 }
