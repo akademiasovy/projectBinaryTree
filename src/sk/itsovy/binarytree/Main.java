@@ -27,6 +27,9 @@ public class Main {
         strom.printInOrder();
 
         System.out.println(myTree.getValue(20));
+        System.out.println(myTree.getParrent(node3).getKey());
+        myTree.remove(node7);
+        myTree.printInOrder();
     }
 
 
